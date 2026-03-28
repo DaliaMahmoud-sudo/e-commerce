@@ -27,6 +27,6 @@ export const serverRoutes: ServerRoute[] = [
   // can be Prerendered for better performance
   {
     path: '**',
-    renderMode: RenderMode.Prerender
+    renderMode: RenderMode.Server
   }
 ];
