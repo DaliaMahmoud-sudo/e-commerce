@@ -1,7 +1,7 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
 
 export const serverRoutes: ServerRoute[] = [
-  // Routes with parameters must be Client or Server rendered 
+  // Routes with parameters must be Client or Server rendered
   // to avoid the getPrerenderParams error
   {
     path: 'details/:id/:slug',
@@ -23,10 +23,10 @@ export const serverRoutes: ServerRoute[] = [
     path: 'allorders',
     renderMode: RenderMode.Client
   },
-  // All other static pages (Home, Shop, Login, etc.) 
+  // All other static pages (Home, Shop, Login, etc.)
   // can be Prerendered for better performance
   {
     path: '**',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Prerender
   }
 ];
